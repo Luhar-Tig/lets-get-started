@@ -4,3 +4,7 @@ venv/
 
 # PyCharm project files
 .idea/
+
+.env
+__pycache__/
+*.pyc
