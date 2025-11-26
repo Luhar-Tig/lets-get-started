@@ -1,10 +1,200 @@
-Use list comprehensions for cleaner loops.
-Prefer pathlib.Path for file operations.
-Use enumerate() instead of range(len()).
-Use f-strings instead of string concatenation.
-Use context managers to handle files safely.
-Use argparse for command-line scripts.
-Write tests with pytest.
-Use logging instead of print().
-Use virtual environments for package isolation.
-Cache results using functools.lru_cache().
+Use list comprehensions instead of manual loops for cleaner and faster list creation.
+Use dictionary comprehensions to transform dicts elegantly.
+Prefer f-strings for readable and fast string formatting.
+Use enumerate() when you need both index and value in loops.
+Use zip() to iterate through multiple iterables in parallel.
+Unpack tuples directly in loops for cleaner code.
+Use *_ to ignore values during unpacking.
+Use Path from pathlib instead of os.path for modern file handling.
+Use with open() to ensure files close automatically.
+Use type hints to improve code readability and tooling.
+Use dataclasses to reduce boilerplate in classes.
+Use __slots__ in classes to save memory for many instances.
+Use functools.lru_cache to memoize expensive function calls.
+Use any() to check if at least one element is True.
+Use all() to check if all elements are True.
+Use sum() to count True values in a boolean list.
+Use sorted() with key= to customize sorting behavior.
+Use lambda for short throwaway functions.
+Use collections.Counter to count occurrences effortlessly.
+Use collections.defaultdict for automatic default values.
+Use collections.deque for fast queue operations.
+Use itertools.permutations for permutation generation.
+Use itertools.combinations to generate unique pairs or groups.
+Use itertools.groupby to group sequences.
+Use itertools.chain to flatten iterables.
+Use itertools.islice for slicing generators.
+Use map() to apply a function to all items in an iterable.
+Use filter() to filter items by a condition.
+Use try/except/else/finally blocks for robust error handling.
+Use raise Exception("message") to make errors explicit.
+Catch specific exceptions instead of using bare except.
+Use assert to verify assumptions during development.
+Use Python’s built-in logging instead of print() in production.
+Use logging.basicConfig to configure logging quickly.
+Use .strip() to clean whitespace from strings.
+Use .split() to break strings into lists.
+Use .join() to combine strings efficiently.
+Use .replace() to perform simple string replacements.
+Use re.sub() for advanced string replacements.
+Use re.findall() to extract patterns from text.
+Use f"{value:.2f}" to format numbers with decimal places.
+Use format(num, ",") for comma-separated numbers.
+Use isinstance() for safe type checking.
+Use generics in type hints like list[str] and dict[str, int].
+Use try/except around int(input()) to catch invalid entries.
+Use random.choice() to pick a random element from a list.
+Use secrets module for cryptographically secure tokens.
+Use datetime.strptime() to convert strings to datetime.
+Use datetime.strftime() to format datetime objects.
+Use timedelta for date and time arithmetic.
+Use functools.reduce for cumulative operations.
+Use math.ceil and math.floor to round numbers precisely.
+Use sum(list_of_lists, []) to flatten small lists.
+Use list.extend() instead of += for clarity.
+Use set() to deduplicate lists quickly.
+Use set operations like union, difference, and intersection.
+Use try/finally to ensure cleanup code runs.
+Use contextlib.contextmanager to create custom context managers.
+Use @property to create read-only attributes.
+Use @classmethod for factory constructors.
+Use @staticmethod for utility functions inside classes.
+Use __repr__ to improve object debugging.
+Use __str__ for user-facing string representation.
+Use *args for variable arguments.
+Use **kwargs for variable keyword arguments.
+Use math.isclose() for floating-point comparisons.
+Use decimal for precise financial calculations.
+Use fractions.Fraction for exact rational arithmetic.
+Use sqlite3 for lightweight local databases.
+Use pandas for data analysis tasks.
+Use numpy for numeric computing.
+Use venv for isolated Python environments.
+Use pip freeze > requirements.txt to save dependencies.
+Use pip install -r requirements.txt to restore environments.
+Use black for consistent code formatting.
+Use flake8 for linting and style checking.
+Use mypy for static type checking.
+Use pylint to enforce coding standards.
+Use pytest for clean testing workflows.
+Use pytest -k "keyword" to run specific tests.
+Use pytest fixtures for reusable test components.
+Use mock.patch for mocking in tests.
+Use pathlib.Path.exists() to check file existence.
+Use Path.mkdir(parents=True, exist_ok=True) for safe folder creation.
+Use shutil.copy() and shutil.move() for file operations.
+Use tempfile for safe temporary file operations.
+Use os.getenv() to access environment variables.
+Use dotenv package to load environment variables from .env files.
+Use subprocess.run() for executing system commands safely.
+Use threading for I/O-bound parallelism.
+Use multiprocessing for CPU-bound parallelism.
+Use concurrent.futures for easy parallel execution.
+Use asyncio for asynchronous programming.
+Use aiohttp for async web requests.
+Use requests for simple HTTP requests.
+Use urllib.parse to build safe URLs.
+Use the json module to parse and write JSON data.
+Use YAML when configuration files get complex.
+Use argparse to build elegant CLI tools.
+Use rich library for beautiful terminal output.
+Use click library to build advanced CLI tools.
+Use schedule library for scheduled tasks.
+Use tqdm for progress bars.
+Use Python’s built-in breakpoint() for debugging.
+Use dir() to inspect object attributes.
+Use vars() to inspect object __dict__.
+Use help() for quick documentation.
+Use inspect module to analyze functions and classes.
+Use sys.getsizeof() to inspect memory usage.
+Use pprint for pretty-printing nested structures.
+Use functools.partial to pre-fill function arguments.
+Use contextlib.suppress to ignore expected exceptions.
+Use heapq for priority queues.
+Use bisect for efficient sorted list insertion.
+Use enum.Enum for named constants.
+Use uuid.uuid4() for unique identifiers.
+Use base64 for encoding binary data.
+Use hashlib for hashing data.
+Use shutil.make_archive for zipping folders.
+Use zipfile.ZipFile to extract ZIP files.
+Use tarfile for tar and tgz archives.
+Use threading.Timer for simple delayed execution.
+Use graphlib.TopologicalSorter for dependency sorting.
+Use functools.cached_property for lazy-loaded properties.
+Use repr() to inspect complex objects quickly.
+Use vars(obj) to inspect object attributes.
+Use locals() inside functions for debugging.
+Use globals() to inspect global variables.
+Use __name__ == "__main__" for script entry points.
+Use itertools.count for infinite counters.
+Use itertools.cycle to rotate through items endlessly.
+Use itertools.repeat to repeat values lazily.
+Use math.prod to multiply items.
+Use statistics.mean, median, and mode for quick stats.
+Use zip(*matrix) to transpose a matrix.
+Use enumerate(list, start=1) to start indexing at 1.
+Use print(*list) to print lists without brackets.
+Use pathlib.Path.read_text() to read entire files.
+Use Path.write_text() to write text easily.
+Use subprocess.check_output to capture command output.
+Use textwrap.dedent to clean up indentation.
+Use difflib to compare text sequences.
+Use calendar module for date utilities.
+Use zoneinfo for timezone-aware datetime handling.
+Use Python REPL for quick testing.
+Use IPython for an enhanced interactive shell.
+Use Jupyter Notebook for exploratory coding.
+Use list slicing [::-1] to reverse sequences.
+Use slicing with step values for skipping items.
+Use dict.get(key, default) to avoid KeyError.
+Use dict.setdefault to initialize missing values.
+Use sorted(dict.items(), key=lambda x: x[1]) for sorting by value.
+Use all(char.isdigit() for char in text) to check numeric strings.
+Use pathlib for cross-platform safe path building.
+Use generators to handle large datasets lazily.
+Use yield to create custom iterators.
+Use generator expressions instead of list comprehensions when you don’t need the whole list.
+Use os.path.expanduser("~") for the home directory.
+Use __enter__ and __exit__ to create custom context managers.
+Use list.pop() to remove and return list items.
+Use dict.pop() to safely remove dictionary keys.
+Use slicing to replace parts of a list efficiently.
+Use list.sort() vs sorted(): one mutates, one returns a new list.
+Use functools.total_ordering to auto-generate comparison methods.
+Use tracemalloc to track memory allocation.
+Use cProfile to profile performance.
+Use time.perf_counter() for benchmarking.
+Use importlib.reload to reload modules dynamically.
+Use * to unpack lists into function arguments.
+Use ** to unpack dictionaries into function parameters.
+Use the walrus operator (:=) for inline assignments.
+Use None as a sentinel default parameter.
+Use decorators to wrap extra behavior around functions.
+Use contextvars for async context management.
+Use reprlib for shortened repr output.
+Use warnings module to issue runtime warnings.
+Use dotenv and os.getenv for secure settings management.
+Use python -m http.server for a quick local server.
+Use pdb for step-by-step debugging.
+Use Path.glob("*.txt") to match file patterns.
+Use shutil.rmtree to delete folders recursively.
+Use tempfile.TemporaryDirectory for safe temporary workspace.
+Use isinstance(obj, (str, list, tuple)) to check multiple types.
+Use copy.deepcopy to clone nested objects safely.
+Use pathlib.Path.home() to get the user’s home directory.
+Use print(json.dumps(obj, indent=2)) for pretty JSON.
+Use sys.argv for command-line argument access.
+Use psutil (if installed) to inspect system resources.
+Use the attrs library for lightweight classes.
+Use sorted(set(list)) to deduplicate and sort lists.
+Use bisect.insort to maintain sorted lists efficiently.
+Use for/else to detect loops that finish without break.
+Use try/except around network calls for reliability.
+Use contextlib.redirect_stdout to capture printed output.
+Use concurrent.futures.ThreadPoolExecutor for concurrency.
+Use Path.read_bytes() to read binary files.
+Use shelve for simple persistent storage.
+Use pytest.mark.parametrize for parameterized tests.
+Use http.server for quick file serving.
+Keep your code simple — readability counts more than cleverness.
