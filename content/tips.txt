@@ -1,0 +1,10 @@
+Use list comprehensions for cleaner loops.
+Prefer pathlib.Path for file operations.
+Use enumerate() instead of range(len()).
+Use f-strings instead of string concatenation.
+Use context managers to handle files safely.
+Use argparse for command-line scripts.
+Write tests with pytest.
+Use logging instead of print().
+Use virtual environments for package isolation.
+Cache results using functools.lru_cache().
